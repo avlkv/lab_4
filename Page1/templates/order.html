@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Заказ № {{ order.id }}{%  endblock %}
+{% block title2 %}Заказ № {{ order.id }}{%  endblock %}
+{% block body %}
+    {% for orderitem in order_dict %}
+        {% if orderitem.id == order.id %}
+            <li>{{ orderitem.item1 }}</li>
+            <li>{{ orderitem.item2 }}</li>
+            <li>{{ orderitem.item3 }}</li>
+            <li>{{ orderitem.item4 }}</li>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
